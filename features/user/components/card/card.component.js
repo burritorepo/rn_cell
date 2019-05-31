@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Image, Alert } from 'react-native';
 import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import { NavigationService, UserService } from '../../../../api';
+import { Camera } from '../../../camara/camara';
 
 class CardUser extends Component {
   constructor(props) {
@@ -80,7 +81,9 @@ class CardUser extends Component {
           Git: {git}
         </Text>
         {button}
+        <Camera />
       </Card>
+      
     )
   }
 }

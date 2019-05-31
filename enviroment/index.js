@@ -1,5 +1,5 @@
 const env = {
-  url : 'http://10.3.3.72:3000'
+  url : 'http://10.3.0.121:3000'
 }
 
 export {

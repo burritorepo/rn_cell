@@ -6,14 +6,19 @@ import {
   UserRoute
 } from '../features';
 
+import {
+  Camara
+} from '../features/camara/camara'
+
 const rootRoutes = createSwitchNavigator(
   {
     LoginLoading: LoginLoadingScreen,
     Login: LoginScreen,
-    App: UserRoute
+    App: UserRoute,
+    Camara: Camara
   },
   {
-    initialRouteName: 'LoginLoading',
+    initialRouteName: 'Camara',
   }
 );
 

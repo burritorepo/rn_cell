@@ -6,7 +6,7 @@
     "ios": "expo start --ios",
     "eject": "expo eject",
     "server": "json-server --watch ./db/db.json",
-    "server:host": "json-server --host 10.3.3.72 ./db/db.json"
+    "server:host": "json-server --host 10.3.0.121 ./db/db.json"
   },
   "dependencies": {
     "expo": "^32.0.0",
