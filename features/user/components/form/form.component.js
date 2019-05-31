@@ -1,4 +1,6 @@
+'use strict'
 import React from "react";
+import ImagePicker from 'react-native-image-picker';
 import {
   Text,
   View,
@@ -12,6 +14,42 @@ import {
   box,
   color
 } from '../../../../assets/styles';
+
+
+function launchImage() {
+  // const options = {
+  //   title: 'Select Avatar',
+  //   customButtons: [{ name: 'fb', title: 'Choose Photo from Facebook' }],
+  //   storageOptions: {
+  //     skipBackup: true,
+  //     path: 'images',
+  //   },
+  // };
+  // ImagePicker.showImagePicker((response) => {
+  //   console.log('Response = ', response);
+
+  //   if (response.didCancel) {
+  //     console.log('User cancelled image picker');
+  //   } else if (response.error) {
+  //     console.log('ImagePicker Error: ', response.error);
+  //   } else if (response.customButton) {
+  //     console.log('User tapped custom button: ', response.customButton);
+  //   } else {
+  //     const source = { uri: response.uri };
+
+  //     // You can also display the image using data:
+  //     // const source = { uri: 'data:image/jpeg;base64,' + response.data };
+
+  //     // this.setState({
+  //     //   avatarSource: source,
+  //     // });
+  //   }
+  // });
+
+  ImagePicker.launchCamera((response) => {
+    // Same code as in above section!
+  });
+}
 
 function FormUser(props) {
   const {
@@ -43,6 +81,7 @@ function FormUser(props) {
           onChangeText={(value) => onChange('lastname', value)}
           value={lastname}
         />
+        
       </View>
       <View style={form.row}>
         <Text style={form.label}>Url Imagen</Text>
@@ -51,6 +90,7 @@ function FormUser(props) {
           onChangeText={(value) => onChange('avatar', value)}
           value={avatar}
         />
+        <Button onPress={launchImage} title="imagen"/>
       </View>
       <View style={form.row}>
         <Text style={form.label}>Usuario Git</Text>
@@ -68,16 +108,6 @@ function FormUser(props) {
           value={email}
         />
       </View>
-      {/* <View style={form.row}>
-        <Text style={form.label}>Pais</Text>
-        <Picker
-          selectedValue={this.state.language}
-          style={{ height: 50, width: 100 }}
-          onValueChange={onchange}>
-          <Picker.Item label="Java" value="java" />
-          <Picker.Item label="JavaScript" value="js" />
-        </Picker>
-      </View> */}
       <View style={form.row}>
         <Button
           onPress={onSubmit}

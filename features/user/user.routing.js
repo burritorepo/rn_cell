@@ -10,7 +10,7 @@ import {
   UserAddScreen
 } from './components';
 
-import HeaderButton from '../../components/header/header.component';
+import HeaderButton, { HeaderLeft } from '../../components/header/header.component';
 
 const UserRoute = createStackNavigator(
   {
@@ -35,9 +35,9 @@ const UserRoute = createStackNavigator(
       },
       headerTintColor: 'white',
       title: 'Usuarios',
+      headerLeft: <HeaderLeft />,
       headerRight: <HeaderButton />
-    },
-    headerBackTitleVisible: false
+    }
   }
 );
 

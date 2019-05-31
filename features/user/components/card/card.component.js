@@ -18,17 +18,6 @@ class CardUser extends Component {
   }
 
   onDelete(id) {
-    // Alert.alert(
-    //   'Deseas Eliminarlo?'
-    //   [
-    //     {text: 'OK', onPress: () => this.userService.deleteUser(id).then(this.props.onGetUsers) },
-    //     {
-    //       text: 'Cancel',
-    //       style: 'cancel',
-    //     }
-    //   ],
-    //   {cancelable: false},
-    // );
     Alert.alert(
       'Alert Title',
       'My Alert Msg',
