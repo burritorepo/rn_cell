@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import {
   UserService
@@ -30,9 +30,16 @@ class UserScreen extends Component {
       })
   }
 
+  moveDetail(id, name, lastname) {
+    this.props.navigation.navigate('UserDetail', {
+      id,
+      fullName: `${name} ${lastname}`
+    })
+  }
+
   render() {
     const users = this.state.users.map(user => {
-      return <CardUser key={user.id} {...user}/>}
+      return <CardUser key={user.id} {...user} onMove={this.moveDetail.bind(this)}/>}
     );
 
     return (
