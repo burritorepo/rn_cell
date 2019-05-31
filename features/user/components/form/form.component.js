@@ -40,7 +40,7 @@ function FormUser(props) {
         <Text style={form.label}>Apellido</Text>
         <TextInput
           style={form.control}
-          onChangeText={(value) => onChange('lasname', value)}
+          onChangeText={(value) => onChange('lastname', value)}
           value={lastname}
         />
       </View>

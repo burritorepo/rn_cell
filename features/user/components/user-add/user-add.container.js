@@ -13,7 +13,7 @@ import {
 } from '../';
 class UserAddScreen extends Component {
   static navigationOptions = {
-    title: 'Agregar Usuarios'
+    title: 'Agregar Usuarios',
   };
 
   constructor(props) {
