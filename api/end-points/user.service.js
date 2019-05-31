@@ -2,6 +2,7 @@ import { Service } from '../core/api.service';
 
 class UserService extends Service {
   createUser(body) {
+    console.log('body', body)
     return this.request({
       url: `users`,
       method: 'POST',

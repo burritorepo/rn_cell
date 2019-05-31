@@ -13,7 +13,7 @@ class Service {
     if (method === 'GET') {
       delete config.body
     }
-
+    console.log('url', `${env.url}/${url}`)
     const response = await fetch(`${env.url}/${url}`, config)
     .then(response => response.json());
 

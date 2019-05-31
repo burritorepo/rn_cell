@@ -13,6 +13,7 @@ class LoginLoadingScreen extends Component {
   }
 
   getToken = async () => {
+    //AsyncStorage.setItem('userToken', '123')
     const userToken = await AsyncStorage.getItem('userToken');
     this.props.navigation.navigate(userToken ? 'App' : 'Login');
   };

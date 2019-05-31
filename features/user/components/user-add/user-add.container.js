@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 
 import {
@@ -41,18 +42,21 @@ class UserAddScreen extends Component {
   }
 
   handleSubmit() {
+    console.log('handle!!!!')
     this.userService.createUser(this.state)
   }
 
   render() {
     return (
-      <View style={Object.assign({}, box.padding, { flex: 1, paddingTop:20 })}>
-        <FormUser
-          onChange={this.handleInputChange.bind(this)}
-          onSubmit={this.handleSubmit.bind(this)}
-          {...this.state}
-        />
-      </View>
+      <ScrollView>
+        <View style={Object.assign({}, box.padding, { flex: 1, paddingTop: 20 })}>
+          <FormUser
+            onChange={this.handleInputChange.bind(this)}
+            onSubmit={this.handleSubmit.bind(this)}
+            {...this.state}
+          />
+        </View>
+      </ScrollView>
     );
   }
 }
