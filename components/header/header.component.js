@@ -8,7 +8,7 @@ class HeaderButton extends React.Component {
     console.log('propiedades', props)
   }
   render() {
-    return <Text onPress={() => this.props.navigation.navigate('UserAdd')}>Add</Text>
+    return <Text style={{paddingRight:10, color:'green'}} onPress={() => this.props.navigation.navigate('UserAdd')}>Add</Text>
   }
 }
 
