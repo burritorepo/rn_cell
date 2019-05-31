@@ -43,7 +43,7 @@ class CardUser extends Component {
     return (
       <Card
         title={`${name} ${lastname}`}>
-        <View>
+        <View style={{flexDirection:'row', justifyContent:'space-between', marginBottom:10}}>
           <Text onPress={this.onEdit.bind(this, id)}>Editar</Text>
           <Text onPress={this.onDelete.bind(this, id)}>Borrar</Text>
         </View>
