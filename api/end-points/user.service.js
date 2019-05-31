@@ -31,7 +31,7 @@ class UserService extends Service {
     return this.request({
       url: `users/${id}`,
       method: 'PUT',
-      body,
+      body: JSON.stringify(body),
       headers
     })
   }
