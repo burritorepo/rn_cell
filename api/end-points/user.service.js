@@ -5,8 +5,9 @@ class UserService extends Service {
     return this.request({
       url: `users`,
       method: 'POST',
-      body,
+      body: JSON.stringify(body),
       headers: {
+        Accept: 'application/json',
         "Content-type": "application/json; charset=UTF-8"
       }
     })
@@ -41,5 +42,7 @@ class UserService extends Service {
   }
 }
 
-export default new UserService();
+export {
+  UserService
+}
 

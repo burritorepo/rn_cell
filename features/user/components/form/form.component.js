@@ -45,6 +45,14 @@ function FormUser(props) {
         />
       </View>
       <View style={form.row}>
+        <Text style={form.label}>Url Imagen</Text>
+        <TextInput
+          style={form.control}
+          onChangeText={(value) => onChange('avatar', value)}
+          value={avatar}
+        />
+      </View>
+      <View style={form.row}>
         <Text style={form.label}>Usuario Git</Text>
         <TextInput
           style={form.control}

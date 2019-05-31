@@ -11,6 +11,11 @@ import {
 import {
   FormUser
 } from '../';
+
+import {
+  UserService
+} from '../../../../api';
+
 class UserAddScreen extends Component {
   static navigationOptions = {
     title: 'Agregar Usuarios',
@@ -22,20 +27,21 @@ class UserAddScreen extends Component {
       name: '',
       lastname: '',
       git: '',
-      email: ''
+      email: '',
+      avatar: ''
     }
+
+    this.userService = new UserService();
   }
 
   handleInputChange(stateName, value) {
-    console.log('value', value)
     this.setState({
       [stateName]: value
     })
-    console.log('this.state', this.state)
   }
 
   handleSubmit() {
-    console.log('enviar!!', this.state)
+    this.userService.createUser(this.state)
   }
 
   render() {
