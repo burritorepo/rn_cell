@@ -1,2 +1,2 @@
-export * from './core/api.service';
+export * from './core';
 export * from './end-points';

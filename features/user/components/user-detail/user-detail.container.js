@@ -30,7 +30,7 @@ class UserDetailScreen extends Component {
 
   getUser() {
     const { navigation } = this.props;
-    
+
     this.userService.getUser(navigation.getParam('id'))
     .then((response) => {
       this.setState({
